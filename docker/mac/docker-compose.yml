@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    working_dir: /src
+    tty: true
+    container_name: typescript-nuxt-app
+    ports:
+      - "3000:3000"
+    entrypoint: "/bin/sh -c 'yarn && yarn dev'"
+    volumes:
+      - ../../src:/src
