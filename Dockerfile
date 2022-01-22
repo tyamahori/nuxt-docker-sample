@@ -11,6 +11,9 @@ ENV LANG=C.UTF-8 \
     NPM_CONFIG_PRODUCTION=false
 
 RUN apk add --no-cache --virtual .gyp python3 make g++
+
 COPY --from=builder /src /src
+
 WORKDIR /src
-#CMD ["yarn", "start"]
+
+CMD ["yarn", "start"]
