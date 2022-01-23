@@ -4,6 +4,6 @@ build:
 release:
   image: web
   command:
-    - yarn install && yarn build
+    - cd /src && yarn install && yarn build
 run:
-  web: yarn start
+  web: cd /src && yarn start
