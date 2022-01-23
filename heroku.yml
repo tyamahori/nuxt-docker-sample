@@ -1,3 +1,9 @@
 build:
   docker:
     web: Dockerfile
+release:
+  image: web
+  command:
+    - /bin/sh -c 'yarn && yarn build'
+run:
+  web: /bin/sh -c 'yarn start'
