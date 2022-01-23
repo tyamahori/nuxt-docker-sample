@@ -10,3 +10,7 @@ RUN apk add --no-cache --virtual .gyp python3 make g++ curl
 COPY ./src /src
 
 WORKDIR /src
+
+RUN yarn && yarn build
+
+CMD ["yarn", "start"]

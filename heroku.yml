@@ -1,9 +1,3 @@
 build:
   docker:
     web: Dockerfile
-release:
-  image: web
-  command:
-    - yarn install && yarn build
-run:
-  web: yarn run start
