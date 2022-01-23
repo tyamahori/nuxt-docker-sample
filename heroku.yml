@@ -1,9 +1,5 @@
 build:
   docker:
-    web: Dockerfile
-release:
-  image: web
-  command:
-    - /bin/sh -c 'yarn && yarn build'
+    web: Dockerfile'
 run:
-  web: /bin/sh -c 'yarn start'
+  web: /bin/sh -c 'yarn && yarn build && yarn start'
