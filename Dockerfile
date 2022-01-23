@@ -5,7 +5,7 @@ ENV LANG=C.UTF-8 \
     HOST=0.0.0.0 \
     NPM_CONFIG_PRODUCTION=false
 
-RUN apk add --no-cache --virtual .gyp python3 make g++
+RUN apk add --no-cache --virtual .gyp python3 make g++ curl
 
 COPY ./src /src
 
