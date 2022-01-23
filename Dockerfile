@@ -1,8 +1,3 @@
-FROM node:16.13.2 as builder
-
-COPY ./src /src
-RUN cd /src && yarn install && yarn build
-
 FROM node:16.13.2-alpine3.15
 
 ENV LANG=C.UTF-8 \
@@ -12,8 +7,6 @@ ENV LANG=C.UTF-8 \
 
 RUN apk add --no-cache --virtual .gyp python3 make g++
 
-COPY --from=builder /src /src
+COPY ./src /src
 
 WORKDIR /src
-
-CMD ["yarn", "start"]
