@@ -11,6 +11,6 @@ COPY ./src /src
 
 WORKDIR /src
 
-RUN yarn && yarn build
-
-CMD ["yarn", "start"]
+#RUN yarn && yarn build
+#
+#CMD ["yarn", "start"]
