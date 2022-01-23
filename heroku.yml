@@ -6,4 +6,4 @@ release:
   command:
     - yarn install && yarn build
 run:
-  web: yarn start
+  web: yarn run start
